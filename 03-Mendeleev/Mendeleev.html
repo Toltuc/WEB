@@ -7,250 +7,202 @@
 	<style>
 		body
 		{
-			font-family:'Segoe UI', Tahoma, sans-serif;
-			background-image:linear-gradient(150deg, lightskyblue, pink);
-			background-attachment:fixed;
-			padding:0px 48px;
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			padding: 20px;
 		}
 		h1
 		{
-			text-align:center;
+			text-align: center;
+			font-size: 20px;
 		}
-		table.mendeleev
+		table
 		{
-			border-collapse:separate;
-			border-spacing:2px;
-			margin:0px auto;
+			border-collapse: collapse;
+			margin: 0 auto;
 		}
-		table.mendeleev td
+		td, th
 		{
-			width:56px;
-			height:56px;
-			text-align:center;
-			vertical-align:top;
-			font-size:11px;
-			padding:2px;
+			border: 1px solid #999;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			font-size: 10px;
+			padding: 2px;
+			background-color: #fff;
 		}
-		table.mendeleev td.element
+		td:empty
 		{
-			border:solid 1px #333;
-			border-radius:4px;
-			cursor:default;
+			border: none;
+			background-color: transparent;
 		}
-		table.mendeleev td.element:hover
+		.num
 		{
-			box-shadow:0px 0px 8px 2px gray;
+			display: block;
+			font-size: 8px;
+			color: #666;
 		}
-		td.element .symbol
+		.sym
 		{
-			display:block;
-			font-size:20px;
-			font-weight:700;
+			display: block;
+			font-size: 14px;
+			font-weight: bold;
 		}
-		td.element .name
+		.lan, .act
 		{
-			display:block;
-			font-size:9px;
-		}
-		/* Группы элементов */
-		td.alkali			{ background-color:#ff9999; }
-		td.alkaline-earth	{ background-color:#ffcc99; }
-		td.transition		{ background-color:#ffff99; }
-		td.post-transition	{ background-color:#cccc99; }
-		td.metalloid		{ background-color:#99cc99; }
-		td.nonmetal			{ background-color:#99ff99; }
-		td.halogen			{ background-color:#99ffcc; }
-		td.noble-gas		{ background-color:#99ccff; }
-		td.lanthanide		{ background-color:#ffbfff; }
-		td.actinide			{ background-color:#ff99cc; }
-		td.f-placeholder	{ background-color:#f0f0f0; border:dashed 1px #666; }
-		table.legend
-		{
-			border-collapse:collapse;
-			margin:24px auto;
-		}
-		table.legend td
-		{
-			border:solid 1px #333;
-			width:48px;
-			height:24px;
-		}
-		table.legend th
-		{
-			font-weight:400;
-			text-align:left;
-			padding-left:8px;
+			background-color: #e0e0e0;
 		}
 	</style>
 </head>
 <body>
-	<h1>Периодическая таблица химических элементов Д.&thinsp;И.&nbsp;Менделеева</h1>
-
-	<table class="mendeleev">
+	<h1>Периодическая таблица химических элементов</h1>
+	<table>
 		<tr>
-			<td class="element nonmetal"><span class="symbol">H</span><span class="name">1 Водород</span></td>
+			<td><span class="num">1</span><span class="sym">H</span></td>
 			<td colspan="16"></td>
-			<td class="element noble-gas"><span class="symbol">He</span><span class="name">2 Гелий</span></td>
+			<td><span class="num">2</span><span class="sym">He</span></td>
 		</tr>
 		<tr>
-			<td class="element alkali"><span class="symbol">Li</span><span class="name">3 Литий</span></td>
-			<td class="element alkaline-earth"><span class="symbol">Be</span><span class="name">4 Бериллий</span></td>
+			<td><span class="num">3</span><span class="sym">Li</span></td>
+			<td><span class="num">4</span><span class="sym">Be</span></td>
 			<td colspan="10"></td>
-			<td class="element metalloid"><span class="symbol">B</span><span class="name">5 Бор</span></td>
-			<td class="element nonmetal"><span class="symbol">C</span><span class="name">6 Углерод</span></td>
-			<td class="element nonmetal"><span class="symbol">N</span><span class="name">7 Азот</span></td>
-			<td class="element nonmetal"><span class="symbol">O</span><span class="name">8 Кислород</span></td>
-			<td class="element halogen"><span class="symbol">F</span><span class="name">9 Фтор</span></td>
-			<td class="element noble-gas"><span class="symbol">Ne</span><span class="name">10 Неон</span></td>
+			<td><span class="num">5</span><span class="sym">B</span></td>
+			<td><span class="num">6</span><span class="sym">C</span></td>
+			<td><span class="num">7</span><span class="sym">N</span></td>
+			<td><span class="num">8</span><span class="sym">O</span></td>
+			<td><span class="num">9</span><span class="sym">F</span></td>
+			<td><span class="num">10</span><span class="sym">Ne</span></td>
 		</tr>
 		<tr>
-			<td class="element alkali"><span class="symbol">Na</span><span class="name">11 Натрий</span></td>
-			<td class="element alkaline-earth"><span class="symbol">Mg</span><span class="name">12 Магний</span></td>
+			<td><span class="num">11</span><span class="sym">Na</span></td>
+			<td><span class="num">12</span><span class="sym">Mg</span></td>
 			<td colspan="10"></td>
-			<td class="element post-transition"><span class="symbol">Al</span><span class="name">13 Алюминий</span></td>
-			<td class="element metalloid"><span class="symbol">Si</span><span class="name">14 Кремний</span></td>
-			<td class="element nonmetal"><span class="symbol">P</span><span class="name">15 Фосфор</span></td>
-			<td class="element nonmetal"><span class="symbol">S</span><span class="name">16 Сера</span></td>
-			<td class="element halogen"><span class="symbol">Cl</span><span class="name">17 Хлор</span></td>
-			<td class="element noble-gas"><span class="symbol">Ar</span><span class="name">18 Аргон</span></td>
+			<td><span class="num">13</span><span class="sym">Al</span></td>
+			<td><span class="num">14</span><span class="sym">Si</span></td>
+			<td><span class="num">15</span><span class="sym">P</span></td>
+			<td><span class="num">16</span><span class="sym">S</span></td>
+			<td><span class="num">17</span><span class="sym">Cl</span></td>
+			<td><span class="num">18</span><span class="sym">Ar</span></td>
 		</tr>
 		<tr>
-			<td class="element alkali"><span class="symbol">K</span><span class="name">19 Калий</span></td>
-			<td class="element alkaline-earth"><span class="symbol">Ca</span><span class="name">20 Кальций</span></td>
-			<td class="element transition"><span class="symbol">Sc</span><span class="name">21 Скандий</span></td>
-			<td class="element transition"><span class="symbol">Ti</span><span class="name">22 Титан</span></td>
-			<td class="element transition"><span class="symbol">V</span><span class="name">23 Ванадий</span></td>
-			<td class="element transition"><span class="symbol">Cr</span><span class="name">24 Хром</span></td>
-			<td class="element transition"><span class="symbol">Mn</span><span class="name">25 Марганец</span></td>
-			<td class="element transition"><span class="symbol">Fe</span><span class="name">26 Железо</span></td>
-			<td class="element transition"><span class="symbol">Co</span><span class="name">27 Кобальт</span></td>
-			<td class="element transition"><span class="symbol">Ni</span><span class="name">28 Никель</span></td>
-			<td class="element transition"><span class="symbol">Cu</span><span class="name">29 Медь</span></td>
-			<td class="element transition"><span class="symbol">Zn</span><span class="name">30 Цинк</span></td>
-			<td class="element post-transition"><span class="symbol">Ga</span><span class="name">31 Галлий</span></td>
-			<td class="element metalloid"><span class="symbol">Ge</span><span class="name">32 Германий</span></td>
-			<td class="element metalloid"><span class="symbol">As</span><span class="name">33 Мышьяк</span></td>
-			<td class="element nonmetal"><span class="symbol">Se</span><span class="name">34 Селен</span></td>
-			<td class="element halogen"><span class="symbol">Br</span><span class="name">35 Бром</span></td>
-			<td class="element noble-gas"><span class="symbol">Kr</span><span class="name">36 Криптон</span></td>
+			<td><span class="num">19</span><span class="sym">K</span></td>
+			<td><span class="num">20</span><span class="sym">Ca</span></td>
+			<td><span class="num">21</span><span class="sym">Sc</span></td>
+			<td><span class="num">22</span><span class="sym">Ti</span></td>
+			<td><span class="num">23</span><span class="sym">V</span></td>
+			<td><span class="num">24</span><span class="sym">Cr</span></td>
+			<td><span class="num">25</span><span class="sym">Mn</span></td>
+			<td><span class="num">26</span><span class="sym">Fe</span></td>
+			<td><span class="num">27</span><span class="sym">Co</span></td>
+			<td><span class="num">28</span><span class="sym">Ni</span></td>
+			<td><span class="num">29</span><span class="sym">Cu</span></td>
+			<td><span class="num">30</span><span class="sym">Zn</span></td>
+			<td><span class="num">31</span><span class="sym">Ga</span></td>
+			<td><span class="num">32</span><span class="sym">Ge</span></td>
+			<td><span class="num">33</span><span class="sym">As</span></td>
+			<td><span class="num">34</span><span class="sym">Se</span></td>
+			<td><span class="num">35</span><span class="sym">Br</span></td>
+			<td><span class="num">36</span><span class="sym">Kr</span></td>
 		</tr>
 		<tr>
-			<td class="element alkali"><span class="symbol">Rb</span><span class="name">37 Рубидий</span></td>
-			<td class="element alkaline-earth"><span class="symbol">Sr</span><span class="name">38 Стронций</span></td>
-			<td class="element transition"><span class="symbol">Y</span><span class="name">39 Иттрий</span></td>
-			<td class="element transition"><span class="symbol">Zr</span><span class="name">40 Цирконий</span></td>
-			<td class="element transition"><span class="symbol">Nb</span><span class="name">41 Ниобий</span></td>
-			<td class="element transition"><span class="symbol">Mo</span><span class="name">42 Молибден</span></td>
-			<td class="element transition"><span class="symbol">Tc</span><span class="name">43 Технеций</span></td>
-			<td class="element transition"><span class="symbol">Ru</span><span class="name">44 Рутений</span></td>
-			<td class="element transition"><span class="symbol">Rh</span><span class="name">45 Родий</span></td>
-			<td class="element transition"><span class="symbol">Pd</span><span class="name">46 Палладий</span></td>
-			<td class="element transition"><span class="symbol">Ag</span><span class="name">47 Серебро</span></td>
-			<td class="element transition"><span class="symbol">Cd</span><span class="name">48 Кадмий</span></td>
-			<td class="element post-transition"><span class="symbol">In</span><span class="name">49 Индий</span></td>
-			<td class="element post-transition"><span class="symbol">Sn</span><span class="name">50 Олово</span></td>
-			<td class="element metalloid"><span class="symbol">Sb</span><span class="name">51 Сурьма</span></td>
-			<td class="element metalloid"><span class="symbol">Te</span><span class="name">52 Теллур</span></td>
-			<td class="element halogen"><span class="symbol">I</span><span class="name">53 Иод</span></td>
-			<td class="element noble-gas"><span class="symbol">Xe</span><span class="name">54 Ксенон</span></td>
+			<td><span class="num">37</span><span class="sym">Rb</span></td>
+			<td><span class="num">38</span><span class="sym">Sr</span></td>
+			<td><span class="num">39</span><span class="sym">Y</span></td>
+			<td><span class="num">40</span><span class="sym">Zr</span></td>
+			<td><span class="num">41</span><span class="sym">Nb</span></td>
+			<td><span class="num">42</span><span class="sym">Mo</span></td>
+			<td><span class="num">43</span><span class="sym">Tc</span></td>
+			<td><span class="num">44</span><span class="sym">Ru</span></td>
+			<td><span class="num">45</span><span class="sym">Rh</span></td>
+			<td><span class="num">46</span><span class="sym">Pd</span></td>
+			<td><span class="num">47</span><span class="sym">Ag</span></td>
+			<td><span class="num">48</span><span class="sym">Cd</span></td>
+			<td><span class="num">49</span><span class="sym">In</span></td>
+			<td><span class="num">50</span><span class="sym">Sn</span></td>
+			<td><span class="num">51</span><span class="sym">Sb</span></td>
+			<td><span class="num">52</span><span class="sym">Te</span></td>
+			<td><span class="num">53</span><span class="sym">I</span></td>
+			<td><span class="num">54</span><span class="sym">Xe</span></td>
 		</tr>
 		<tr>
-			<td class="element alkali"><span class="symbol">Cs</span><span class="name">55 Цезий</span></td>
-			<td class="element alkaline-earth"><span class="symbol">Ba</span><span class="name">56 Барий</span></td>
-			<td class="element f-placeholder">57&ndash;71</td>
-			<td class="element transition"><span class="symbol">Hf</span><span class="name">72 Гафний</span></td>
-			<td class="element transition"><span class="symbol">Ta</span><span class="name">73 Тантал</span></td>
-			<td class="element transition"><span class="symbol">W</span><span class="name">74 Вольфрам</span></td>
-			<td class="element transition"><span class="symbol">Re</span><span class="name">75 Рений</span></td>
-			<td class="element transition"><span class="symbol">Os</span><span class="name">76 Осмий</span></td>
-			<td class="element transition"><span class="symbol">Ir</span><span class="name">77 Иридий</span></td>
-			<td class="element transition"><span class="symbol">Pt</span><span class="name">78 Платина</span></td>
-			<td class="element transition"><span class="symbol">Au</span><span class="name">79 Золото</span></td>
-			<td class="element transition"><span class="symbol">Hg</span><span class="name">80 Ртуть</span></td>
-			<td class="element post-transition"><span class="symbol">Tl</span><span class="name">81 Таллий</span></td>
-			<td class="element post-transition"><span class="symbol">Pb</span><span class="name">82 Свинец</span></td>
-			<td class="element post-transition"><span class="symbol">Bi</span><span class="name">83 Висмут</span></td>
-			<td class="element post-transition"><span class="symbol">Po</span><span class="name">84 Полоний</span></td>
-			<td class="element halogen"><span class="symbol">At</span><span class="name">85 Астат</span></td>
-			<td class="element noble-gas"><span class="symbol">Rn</span><span class="name">86 Радон</span></td>
+			<td><span class="num">55</span><span class="sym">Cs</span></td>
+			<td><span class="num">56</span><span class="sym">Ba</span></td>
+			<td class="lan">57-71</td>
+			<td><span class="num">72</span><span class="sym">Hf</span></td>
+			<td><span class="num">73</span><span class="sym">Ta</span></td>
+			<td><span class="num">74</span><span class="sym">W</span></td>
+			<td><span class="num">75</span><span class="sym">Re</span></td>
+			<td><span class="num">76</span><span class="sym">Os</span></td>
+			<td><span class="num">77</span><span class="sym">Ir</span></td>
+			<td><span class="num">78</span><span class="sym">Pt</span></td>
+			<td><span class="num">79</span><span class="sym">Au</span></td>
+			<td><span class="num">80</span><span class="sym">Hg</span></td>
+			<td><span class="num">81</span><span class="sym">Tl</span></td>
+			<td><span class="num">82</span><span class="sym">Pb</span></td>
+			<td><span class="num">83</span><span class="sym">Bi</span></td>
+			<td><span class="num">84</span><span class="sym">Po</span></td>
+			<td><span class="num">85</span><span class="sym">At</span></td>
+			<td><span class="num">86</span><span class="sym">Rn</span></td>
 		</tr>
 		<tr>
-			<td class="element alkali"><span class="symbol">Fr</span><span class="name">87 Франций</span></td>
-			<td class="element alkaline-earth"><span class="symbol">Ra</span><span class="name">88 Радий</span></td>
-			<td class="element f-placeholder">89&ndash;103</td>
-			<td class="element transition"><span class="symbol">Rf</span><span class="name">104 Резерфордий</span></td>
-			<td class="element transition"><span class="symbol">Db</span><span class="name">105 Дубний</span></td>
-			<td class="element transition"><span class="symbol">Sg</span><span class="name">106 Сиборгий</span></td>
-			<td class="element transition"><span class="symbol">Bh</span><span class="name">107 Борий</span></td>
-			<td class="element transition"><span class="symbol">Hs</span><span class="name">108 Хассий</span></td>
-			<td class="element transition"><span class="symbol">Mt</span><span class="name">109 Мейтнерий</span></td>
-			<td class="element transition"><span class="symbol">Ds</span><span class="name">110 Дармштадтий</span></td>
-			<td class="element transition"><span class="symbol">Rg</span><span class="name">111 Рентгений</span></td>
-			<td class="element transition"><span class="symbol">Cn</span><span class="name">112 Коперниций</span></td>
-			<td class="element post-transition"><span class="symbol">Nh</span><span class="name">113 Нихоний</span></td>
-			<td class="element post-transition"><span class="symbol">Fl</span><span class="name">114 Флеровий</span></td>
-			<td class="element post-transition"><span class="symbol">Mc</span><span class="name">115 Московий</span></td>
-			<td class="element post-transition"><span class="symbol">Lv</span><span class="name">116 Ливерморий</span></td>
-			<td class="element halogen"><span class="symbol">Ts</span><span class="name">117 Теннессин</span></td>
-			<td class="element noble-gas"><span class="symbol">Og</span><span class="name">118 Оганесон</span></td>
+			<td><span class="num">87</span><span class="sym">Fr</span></td>
+			<td><span class="num">88</span><span class="sym">Ra</span></td>
+			<td class="act">89-103</td>
+			<td><span class="num">104</span><span class="sym">Rf</span></td>
+			<td><span class="num">105</span><span class="sym">Db</span></td>
+			<td><span class="num">106</span><span class="sym">Sg</span></td>
+			<td><span class="num">107</span><span class="sym">Bh</span></td>
+			<td><span class="num">108</span><span class="sym">Hs</span></td>
+			<td><span class="num">109</span><span class="sym">Mt</span></td>
+			<td><span class="num">110</span><span class="sym">Ds</span></td>
+			<td><span class="num">111</span><span class="sym">Rg</span></td>
+			<td><span class="num">112</span><span class="sym">Cn</span></td>
+			<td><span class="num">113</span><span class="sym">Nh</span></td>
+			<td><span class="num">114</span><span class="sym">Fl</span></td>
+			<td><span class="num">115</span><span class="sym">Mc</span></td>
+			<td><span class="num">116</span><span class="sym">Lv</span></td>
+			<td><span class="num">117</span><span class="sym">Ts</span></td>
+			<td><span class="num">118</span><span class="sym">Og</span></td>
 		</tr>
-		<tr>
-			<td colspan="18" style="height:16px; border:none;"></td>
-		</tr>
-		<!-- Лантаноиды -->
+		<tr><td colspan="18" style="height: 10px; border: none;"></td></tr>
 		<tr>
 			<td colspan="2"></td>
-			<td class="element lanthanide"><span class="symbol">La</span><span class="name">57 Лантан</span></td>
-			<td class="element lanthanide"><span class="symbol">Ce</span><span class="name">58 Церий</span></td>
-			<td class="element lanthanide"><span class="symbol">Pr</span><span class="name">59 Празеодим</span></td>
-			<td class="element lanthanide"><span class="symbol">Nd</span><span class="name">60 Неодим</span></td>
-			<td class="element lanthanide"><span class="symbol">Pm</span><span class="name">61 Прометий</span></td>
-			<td class="element lanthanide"><span class="symbol">Sm</span><span class="name">62 Самарий</span></td>
-			<td class="element lanthanide"><span class="symbol">Eu</span><span class="name">63 Европий</span></td>
-			<td class="element lanthanide"><span class="symbol">Gd</span><span class="name">64 Гадолиний</span></td>
-			<td class="element lanthanide"><span class="symbol">Tb</span><span class="name">65 Тербий</span></td>
-			<td class="element lanthanide"><span class="symbol">Dy</span><span class="name">66 Диспрозий</span></td>
-			<td class="element lanthanide"><span class="symbol">Ho</span><span class="name">67 Гольмий</span></td>
-			<td class="element lanthanide"><span class="symbol">Er</span><span class="name">68 Эрбий</span></td>
-			<td class="element lanthanide"><span class="symbol">Tm</span><span class="name">69 Тулий</span></td>
-			<td class="element lanthanide"><span class="symbol">Yb</span><span class="name">70 Иттербий</span></td>
-			<td class="element lanthanide"><span class="symbol">Lu</span><span class="name">71 Лютеций</span></td>
+			<td class="lan"><span class="num">57</span><span class="sym">La</span></td>
+			<td><span class="num">58</span><span class="sym">Ce</span></td>
+			<td><span class="num">59</span><span class="sym">Pr</span></td>
+			<td><span class="num">60</span><span class="sym">Nd</span></td>
+			<td><span class="num">61</span><span class="sym">Pm</span></td>
+			<td><span class="num">62</span><span class="sym">Sm</span></td>
+			<td><span class="num">63</span><span class="sym">Eu</span></td>
+			<td><span class="num">64</span><span class="sym">Gd</span></td>
+			<td><span class="num">65</span><span class="sym">Tb</span></td>
+			<td><span class="num">66</span><span class="sym">Dy</span></td>
+			<td><span class="num">67</span><span class="sym">Ho</span></td>
+			<td><span class="num">68</span><span class="sym">Er</span></td>
+			<td><span class="num">69</span><span class="sym">Tm</span></td>
+			<td><span class="num">70</span><span class="sym">Yb</span></td>
+			<td><span class="num">71</span><span class="sym">Lu</span></td>
 			<td></td>
 		</tr>
-		<!-- Актиноиды -->
 		<tr>
 			<td colspan="2"></td>
-			<td class="element actinide"><span class="symbol">Ac</span><span class="name">89 Актиний</span></td>
-			<td class="element actinide"><span class="symbol">Th</span><span class="name">90 Торий</span></td>
-			<td class="element actinide"><span class="symbol">Pa</span><span class="name">91 Протактиний</span></td>
-			<td class="element actinide"><span class="symbol">U</span><span class="name">92 Уран</span></td>
-			<td class="element actinide"><span class="symbol">Np</span><span class="name">93 Нептуний</span></td>
-			<td class="element actinide"><span class="symbol">Pu</span><span class="name">94 Плутоний</span></td>
-			<td class="element actinide"><span class="symbol">Am</span><span class="name">95 Америций</span></td>
-			<td class="element actinide"><span class="symbol">Cm</span><span class="name">96 Кюрий</span></td>
-			<td class="element actinide"><span class="symbol">Bk</span><span class="name">97 Берклий</span></td>
-			<td class="element actinide"><span class="symbol">Cf</span><span class="name">98 Калифорний</span></td>
-			<td class="element actinide"><span class="symbol">Es</span><span class="name">99 Эйнштейний</span></td>
-			<td class="element actinide"><span class="symbol">Fm</span><span class="name">100 Фермий</span></td>
-			<td class="element actinide"><span class="symbol">Md</span><span class="name">101 Менделевий</span></td>
-			<td class="element actinide"><span class="symbol">No</span><span class="name">102 Нобелий</span></td>
-			<td class="element actinide"><span class="symbol">Lr</span><span class="name">103 Лоуренсий</span></td>
+			<td class="act"><span class="num">89</span><span class="sym">Ac</span></td>
+			<td><span class="num">90</span><span class="sym">Th</span></td>
+			<td><span class="num">91</span><span class="sym">Pa</span></td>
+			<td><span class="num">92</span><span class="sym">U</span></td>
+			<td><span class="num">93</span><span class="sym">Np</span></td>
+			<td><span class="num">94</span><span class="sym">Pu</span></td>
+			<td><span class="num">95</span><span class="sym">Am</span></td>
+			<td><span class="num">96</span><span class="sym">Cm</span></td>
+			<td><span class="num">97</span><span class="sym">Bk</span></td>
+			<td><span class="num">98</span><span class="sym">Cf</span></td>
+			<td><span class="num">99</span><span class="sym">Es</span></td>
+			<td><span class="num">100</span><span class="sym">Fm</span></td>
+			<td><span class="num">101</span><span class="sym">Md</span></td>
+			<td><span class="num">102</span><span class="sym">No</span></td>
+			<td><span class="num">103</span><span class="sym">Lr</span></td>
 			<td></td>
 		</tr>
-	</table>
-
-	<h2>Легенда</h2>
-	<table class="legend">
-		<tr><td class="alkali"></td><th>Щелочные металлы</th></tr>
-		<tr><td class="alkaline-earth"></td><th>Щёлочноземельные металлы</th></tr>
-		<tr><td class="transition"></td><th>Переходные металлы</th></tr>
-		<tr><td class="post-transition"></td><th>Постпереходные металлы</th></tr>
-		<tr><td class="metalloid"></td><th>Полуметаллы (металлоиды)</th></tr>
-		<tr><td class="nonmetal"></td><th>Неметаллы</th></tr>
-		<tr><td class="halogen"></td><th>Галогены</th></tr>
-		<tr><td class="noble-gas"></td><th>Благородные газы</th></tr>
-		<tr><td class="lanthanide"></td><th>Лантаноиды</th></tr>
-		<tr><td class="actinide"></td><th>Актиноиды</th></tr>
 	</table>
 </body>
 </html>
