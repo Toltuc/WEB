@@ -1,0 +1,70 @@
+<!-- ДОПОЛНЕНО -->
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Geometry</title>
+	<style>
+		body, input, button { font-size:18px; }
+		input { width:100px; }
+		pre { font-size:18px; line-height:1.2; }
+	</style>
+</head>
+<body>
+	<h1>Фигуры</h1>
+	<p>Размер фигуры задает пользователь. Фигуры выведены в порядке возрастания сложности.</p>
+
+	<label for="size">Размер фигуры: </label>
+	<input type="number" id="size" value="5" min="1">
+	<input type="button" value="Вывести" onclick="showFigures()">
+
+	<div id="figures"></div>
+
+	<script>
+		// Каждая фигура строится по размеру n, который задает пользователь.
+		function repeatStars(count)
+		{
+			return "* ".repeat(count).trimEnd();
+		}
+		const FIGURES =
+		[
+			// 0) Квадрат
+			n => Array.from({ length: n }, () => repeatStars(n)),
+			// 1) Треугольник, растущий вниз
+			n => Array.from({ length: n }, (_, i) => repeatStars(i + 1)),
+			// 2) Треугольник, убывающий вниз
+			n => Array.from({ length: n }, (_, i) => repeatStars(n - i)),
+			// 3) Лесенка, сдвигающаяся вправо
+			n => Array.from({ length: n }, (_, i) => " ".repeat(2 * i) + repeatStars(n - i)),
+			// 4) Лесенка, прижатая к правому краю
+			n => Array.from({ length: n }, (_, i) => " ".repeat(2 * (n - 1 - i)) + repeatStars(i + 1)),
+			// 5) Ромб из / и \
+			n =>
+			[
+				...Array.from({ length: n }, (_, i) => " ".repeat(n - 1 - i) + "/" + " ".repeat(2 * i) + "\\"),
+				...Array.from({ length: n }, (_, j) => " ".repeat(j) + "\\" + " ".repeat(2 * (n - 1 - j)) + "/")
+			],
+			// 6) Шахматный узор из + и -
+			n => Array.from({ length: n }, (_, r) =>
+				Array.from({ length: n }, (_, c) => (r + c) % 2 === 0 ? "+" : "-").join(" ")),
+		];
+
+		function showFigures()
+		{
+			let n = Math.max(1, Math.trunc(Number(document.getElementById("size").value)) || 1);
+			let container = document.getElementById("figures");
+			container.innerHTML = "";
+
+			FIGURES.forEach((figure, index) => {
+				let title = document.createElement("h2");
+				title.textContent = `Фигура ${index}`;
+				let picture = document.createElement("pre");
+				picture.textContent = figure(n).join("\n");
+				container.append(title, picture);
+			});
+		}
+		showFigures();
+	</script>
+</body>
+</html>

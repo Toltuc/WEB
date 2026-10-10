@@ -51,6 +51,8 @@ function SetState()
 	console.log(this.innerHTML);
 	Press(this.innerHTML);
 }
+// днонкмемн
+document.getElementById("Backspace").addEventListener("click", Backspace);
 function inputDigit()
 {
 	/*let display = document.getElementById("display");

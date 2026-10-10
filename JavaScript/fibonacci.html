@@ -1,0 +1,65 @@
+<!-- ДОПОЛНЕНО -->
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Фибоначчи</title>
+	<style>
+		body, input, button { font-size:18px; }
+		input { width:140px; }
+		.result { font-family:monospace; word-break:break-all; }
+	</style>
+</head>
+<body>
+	<h1>Ряд Фибоначчи</h1>
+
+	<h2>Числа ряда до указанного предела</h2>
+	<input type="number" id="limit" value="100" min="0">
+	<input type="button" value="Вывести" onclick="showUpToLimit()">
+	<p class="result" id="limit-result"></p>
+
+	<h2>Заданное количество чисел ряда</h2>
+	<input type="number" id="count" value="10" min="0">
+	<input type="button" value="Вывести" onclick="showCount()">
+	<p class="result" id="count-result"></p>
+
+	<script>
+		// Ряд: 0, 1, 1, 2, 3, 5, 8, ...
+		function fibonacciUpTo(limit)
+		{
+			let result = [];
+			let a = 0n, b = 1n;
+			while (a <= limit)
+			{
+				result.push(a);
+				[a, b] = [b, a + b];
+			}
+			return result;
+		}
+		function fibonacciCount(count)
+		{
+			let result = [];
+			let a = 0n, b = 1n;
+			for (let i = 0; i < count; i++)
+			{
+				result.push(a);
+				[a, b] = [b, a + b];
+			}
+			return result;
+		}
+		function showUpToLimit()
+		{
+			let limit = BigInt(Math.trunc(Number(document.getElementById("limit").value)) || 0);
+			document.getElementById("limit-result").textContent = fibonacciUpTo(limit).join(", ");
+		}
+		function showCount()
+		{
+			let count = Math.trunc(Number(document.getElementById("count").value)) || 0;
+			document.getElementById("count-result").textContent = fibonacciCount(count).join(", ");
+		}
+		showUpToLimit();
+		showCount();
+	</script>
+</body>
+</html>
